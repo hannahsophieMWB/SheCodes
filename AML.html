@@ -11,11 +11,13 @@
       h1 {
         text-align: center;
         color: black;
+        padding: 15px;
       }
 
       h2 {
         text-align: center;
-        border: 1px solid #F9DFE2;
+        border-top: 1px solid #F9DFE2;
+        border-bottom: 1px solid #F9DFE2;
         padding: 15px;
         font-size: 18px;
         border-radius: 4px;
@@ -43,7 +45,7 @@
         margin: 20px auto;
         background: #F9DFE2;
         color: white;
-        font-size: 14px;
+        font-size: 16px;
         padding: 15px 20px;
         border: 10px;
         border-radius: 6px;
@@ -52,10 +54,11 @@
         cursor: pointer;
       }
 
-      button:hover {
-        opacity: 0.9;
-        cursor: pointer;
-      }
+      button:hover{
+              background: white;
+              color: blueviolet;
+              cursor: pointer;
+            }
       .bg {
         position: fixed;
         top: -50%;
@@ -64,7 +67,8 @@
         bottom: -50%;
         width: 100%;
         height: 200vh;
-        background: transparent url('/Users/hannahbecher/Pleo_GIT/SheCodes/Final Project/wp3847625-superwoman-wallpaper.jpg') repeat 0 0;
+        background: transparent url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/379/original/wp3847625-superwoman-wallpaper.jpg?1637452740') repeat 0 0;
+        background-position: -38%;
         background-repeat: repeat;
         animation: bg-animation .2s infinite;
         opacity: .4;
@@ -154,31 +158,25 @@
     <div class="bg"></div>
     <div class="split right">
       <h1>
-        Welcome to the AML Notion Page
+        Welcome to the page of the Financial Crime Fighters
       </h1>
       <h2>
-        Our AML Superheros are on a mission to protect us all against financial crime 
-        risk. 
+        Our Anti Money Laundering Superheros are on a mission to protect us all against financial crime 
         
       </h2>
       <div class="centered">
       </div>
       </a>
       &nbsp;
-      <button class="general">
-        👉 FC Policies & Procedures
-      </button>
+       
+       <button class="general" onclick="location.href=' https://en.wikipedia.org/wiki/Financial_crime';"> 
+        👉 What is Financial Crime?
+       </button>
+  
 
-      <button class="general">
-        👉 FC Risk Models
-      </button>
+       <button class="why" onclick="location.href=' https://www.fatf-gafi.org/faq/moneylaundering';">
+        👉 Why is it important?
 
-      <button class="general">
-        👉 FC Advisory
-      </button>
-
-      <button class="general">
-        👉 FC Training
       </button>
 
       <button class="internal">
@@ -196,12 +194,6 @@
 
     <script>
 
-        function general() {
-                      
-                      alert(
-                        "This will lead to a new page") 
-                    }
-
        function internal() {
         let name = prompt("What is your name?");
         let department = prompt("In what department do you work?");
@@ -215,7 +207,7 @@
             emoji
             ) 
           }else {
-          alert(`🤔  Sorry,  ${name} - you have to become a AML avenger first `);
+          alert(`🤔  Sorry,  ${name} - you have to become an AML avenger first `);
         };
       }
 
@@ -223,8 +215,6 @@
       let internalButton = document.querySelector(".internal");
       internalButton.addEventListener("click", internal);
 
-      let generalButton = document.querySelector(".general");
-      generalButton.addEventListener("click", general);
 
 
       
